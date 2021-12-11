@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Profile";
+    var studentInfo = Session["Student"] as DemoProject.Models.Student;
+}
+
+<h2>Profile</h2>
+<ul>
+    <li>Username: @studentInfo.Username</li>
+    <li>Email: @studentInfo.Email</li>
+    <li>Password: @studentInfo.Password</li>
+</ul>
+@Html.ActionLink("Logout", "Logout", "Students");
+
+@*@section script (
+    <script>
+        alert(1);
+    </script>
+)*@
+
